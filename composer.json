@@ -22,7 +22,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.23|^7.0",
-        "laravel-russian/laravel-translatable": "dev-master",
+        "laravel-russian/laravel-translatable": "dev-main",
         "pestphp/pest": "^1.20"
     },
     "autoload": {
