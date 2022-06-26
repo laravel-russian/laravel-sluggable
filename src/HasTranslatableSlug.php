@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Sluggable;
+namespace LaravelRussian\Sluggable;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -64,8 +64,8 @@ trait HasTranslatableSlug
         $slug = $this->getTranslations($slugField)[$this->getLocale()] ?? null;
 
         $slugGeneratedFromCallable = is_callable($this->slugOptions->generateSlugFrom);
-        $hasCustomSlug = $this->hasCustomSlugBeenUsed() && ! empty($slug);
-        $hasNonChangedCustomSlug = ! $slugGeneratedFromCallable && ! empty($slug) && ! $this->slugIsBasedOnTitle();
+        $hasCustomSlug = $this->hasCustomSlugBeenUsed() && !empty($slug);
+        $hasNonChangedCustomSlug = !$slugGeneratedFromCallable && !empty($slug) && !$this->slugIsBasedOnTitle();
 
         if ($hasCustomSlug || $hasNonChangedCustomSlug) {
             $slugString = $slug;
@@ -85,7 +85,7 @@ trait HasTranslatableSlug
         $titleSlug = Str::slug($this->getOriginalSourceString(), $this->slugOptions->slugSeparator, $this->slugOptions->slugLanguage);
         $currentSlug = $this->getTranslations($slugField)[$this->getLocale()] ?? null;
 
-        if (! str_starts_with($currentSlug, $titleSlug) || $titleSlug === '') {
+        if (!str_starts_with($currentSlug, $titleSlug) || $titleSlug === '') {
             return false;
         }
 

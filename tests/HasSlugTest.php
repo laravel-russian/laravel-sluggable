@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Str;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Sluggable\Tests\TestSupport\TestModel;
-use Spatie\Sluggable\Tests\TestSupport\TestModelSoftDeletes;
+use LaravelRussian\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\Tests\TestSupport\TestModel;
+use LaravelRussian\Sluggable\Tests\TestSupport\TestModelSoftDeletes;
 
 it('will save a slug when saving a model', function () {
     $model = TestModel::create(['name' => 'this is a test']);
@@ -170,7 +170,7 @@ it('has a method that prevents a slug being generated on condition', function ()
 
     expect($model->url)->toBeNull();
 
-    $model->other_field = 'Spatie';
+    $model->other_field = 'LaravelRussian';
     $model->save();
 
     expect($model->url)->toBeNull();

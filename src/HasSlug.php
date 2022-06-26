@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\Sluggable;
+namespace LaravelRussian\Sluggable;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Spatie\Sluggable\Exceptions\InvalidOption;
+use LaravelRussian\Sluggable\Exceptions\InvalidOption;
 
 trait HasSlug
 {
@@ -31,7 +31,7 @@ trait HasSlug
             return;
         }
 
-        if (! $this->slugOptions->generateSlugsOnCreate) {
+        if (!$this->slugOptions->generateSlugsOnCreate) {
             return;
         }
 
@@ -52,7 +52,7 @@ trait HasSlug
             return;
         }
 
-        if (! $this->slugOptions->generateSlugsOnUpdate) {
+        if (!$this->slugOptions->generateSlugsOnUpdate) {
             return;
         }
 
@@ -91,7 +91,7 @@ trait HasSlug
     {
         $slugField = $this->slugOptions->slugField;
 
-        if ($this->hasCustomSlugBeenUsed() && ! empty($this->$slugField)) {
+        if ($this->hasCustomSlugBeenUsed() && !empty($this->$slugField)) {
             return $this->$slugField;
         }
 
@@ -131,7 +131,7 @@ trait HasSlug
         $i = 1;
 
         while ($this->otherRecordExistsWithSlug($slug) || $slug === '') {
-            $slug = $originalSlug.$this->slugOptions->slugSeparator.$i++;
+            $slug = $originalSlug . $this->slugOptions->slugSeparator . $i++;
         }
 
         return $slug;
@@ -164,11 +164,11 @@ trait HasSlug
 
     protected function ensureValidSlugOptions(): void
     {
-        if (is_array($this->slugOptions->generateSlugFrom) && ! count($this->slugOptions->generateSlugFrom)) {
+        if (is_array($this->slugOptions->generateSlugFrom) && !count($this->slugOptions->generateSlugFrom)) {
             throw InvalidOption::missingFromField();
         }
 
-        if (! strlen($this->slugOptions->slugField)) {
+        if (!strlen($this->slugOptions->slugField)) {
             throw InvalidOption::missingSlugField();
         }
 

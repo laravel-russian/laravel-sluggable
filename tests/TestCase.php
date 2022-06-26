@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Sluggable\Tests;
+namespace LaravelRussian\Sluggable\Tests;
 
 use File;
 use Illuminate\Database\Schema\Blueprint;

@@ -1,17 +1,17 @@
 {
-    "name": "spatie/laravel-sluggable",
+    "name": "laravel-russian/laravel-sluggable",
     "description": "Generate slugs when saving Eloquent models",
     "keywords": [
-        "spatie",
+        "laravel-russian",
         "laravel-sluggable"
     ],
-    "homepage": "https://github.com/spatie/laravel-sluggable",
+    "homepage": "https://github.com/laravel-russian/laravel-sluggable",
     "license": "MIT",
     "authors": [
         {
             "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "email": "freek@laravel-russian.be",
+            "homepage": "https://laravel-russian.be",
             "role": "Developer"
         }
     ],
@@ -22,23 +22,29 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.23|^7.0",
-        "spatie/laravel-translatable": "^5.0|^6.0",      
+        "laravel-russian/laravel-translatable": "dev-master",
         "pestphp/pest": "^1.20"
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Sluggable\\": "src"
+            "LaravelRussian\\Sluggable\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Sluggable\\Tests\\": "tests"
+            "LaravelRussian\\Sluggable\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/pest",
         "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-translatable"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }

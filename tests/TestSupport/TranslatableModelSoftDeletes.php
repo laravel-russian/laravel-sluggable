@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Sluggable\Tests\TestSupport;
+namespace LaravelRussian\Sluggable\Tests\TestSupport;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Sluggable\HasTranslatableSlug;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Translatable\HasTranslations;
+use LaravelRussian\Sluggable\HasTranslatableSlug;
+use LaravelRussian\Sluggable\SlugOptions;
+use LaravelRussian\Translatable\HasTranslations;
 
 class TranslatableModelSoftDeletes extends Model
 {

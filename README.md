@@ -1,12 +1,11 @@
-
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
 
 # Generate slugs when saving Eloquent models
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-sluggable)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-russian/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/laravel-russian/laravel-sluggable)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/spatie/laravel-sluggable/run-tests?label=tests)](https://github.com/spatie/laravel-sluggable/actions)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/spatie/laravel-sluggable)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/laravel-russian/laravel-sluggable/run-tests?label=tests)](https://github.com/laravel-russian/laravel-sluggable/actions)
+[![Total Downloads](https://img.shields.io/packagist/dt/laravel-russian/laravel-sluggable.svg?style=flat-square)](https://packagist.org/packages/laravel-russian/laravel-sluggable)
 
 This package provides a trait that will generate a unique slug when saving any Eloquent model.
 
@@ -20,26 +19,27 @@ echo $model->slug; // outputs "activerecord-is-awesome"
 
 The slugs are generated with Laravels `Str::slug` method, whereby spaces are converted to '-'.
 
-Spatie is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://spatie.be/opensource).
+LaravelRussian is a webdesign agency based in Antwerp, Belgium. You'll find an overview of all our open source projects [on our website](https://laravel-russian.be/opensource).
 
 ## Support us
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-sluggable.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-sluggable)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-sluggable.jpg?t=1" width="419px" />](https://laravel-russian.be/github-ad-click/laravel-sluggable)
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+We invest a lot of resources into creating [best in class open source packages](https://laravel-russian.be/open-source). You can support us by [buying one of our paid products](https://laravel-russian.be/open-source/support-us).
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://laravel-russian.be/about-us). We publish all received postcards on [our virtual postcard wall](https://laravel-russian.be/open-source/postcards).
 
 ## Installation
 
 You can install the package via composer:
-``` bash
-composer require spatie/laravel-sluggable
+
+```bash
+composer require laravel-russian/laravel-sluggable
 ```
 
 ## Usage
 
-Your Eloquent models should use the `Spatie\Sluggable\HasSlug` trait and the `Spatie\Sluggable\SlugOptions` class.
+Your Eloquent models should use the `LaravelRussian\Sluggable\HasSlug` trait and the `LaravelRussian\Sluggable\SlugOptions` class.
 
 The trait contains an abstract method `getSlugOptions()` that you must implement yourself.
 
@@ -50,8 +50,8 @@ Here's an example of how to implement the trait:
 ```php
 namespace App;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\HasSlug;
+use LaravelRussian\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 
 class YourEloquentModel extends Model
@@ -99,8 +99,8 @@ To use the generated slug in routes, remember to use Laravel's [implicit route m
 ```php
 namespace App;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\HasSlug;
+use LaravelRussian\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 
 class YourEloquentModel extends Model
@@ -284,7 +284,6 @@ public function getSlugOptions() : SlugOptions
 
 ### Using scopes
 
-
 If you have a global scope that should be taken into account, you can define this as well with `extraScope`. For example if you have a pages table containing pages of multiple websites and every website has it's own unique slugs.
 
 ```php
@@ -299,14 +298,14 @@ public function getSlugOptions() : SlugOptions
 
 ### Integration with laravel-translatable
 
-You can use this package along with [laravel-translatable](https://github.com/spatie/laravel-translatable) to generate a slug for each locale. Instead of using the `HasSlug` trait, you must use the `HasTranslatableSlug` trait, and add the name of the slug field to the `$translatable` array. For slugs that are generated from a single field _or_ multiple fields, you don't have to change anything else.
+You can use this package along with [laravel-translatable](https://github.com/laravel-russian/laravel-translatable) to generate a slug for each locale. Instead of using the `HasSlug` trait, you must use the `HasTranslatableSlug` trait, and add the name of the slug field to the `$translatable` array. For slugs that are generated from a single field _or_ multiple fields, you don't have to change anything else.
 
 ```php
 namespace App;
 
-use Spatie\Sluggable\HasTranslatableSlug;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Translatable\HasTranslations;
+use LaravelRussian\Sluggable\HasTranslatableSlug;
+use LaravelRussian\Sluggable\SlugOptions;
+use LaravelRussian\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 
 class YourEloquentModel extends Model
@@ -332,9 +331,9 @@ For slugs that are generated from a callable, you need to instantiate the `SlugO
 ```php
 namespace App;
 
-use Spatie\Sluggable\HasTranslatableSlug;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Translatable\HasTranslations;
+use LaravelRussian\Sluggable\HasTranslatableSlug;
+use LaravelRussian\Sluggable\SlugOptions;
+use LaravelRussian\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Model;
 
 class YourEloquentModel extends Model
@@ -366,8 +365,8 @@ Currently, only some database types support JSON opterations. Further informatio
 ```php
 namespace App;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\HasSlug;
+use LaravelRussian\Sluggable\SlugOptions;
 use Illuminate\Database\Eloquent\Model;
 
 class YourEloquentModel extends Model
@@ -398,29 +397,28 @@ class YourEloquentModel extends Model
 }
 ```
 
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
 ## Testing
 
-``` bash
+```bash
 composer test
 ```
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/laravel-russian/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Security
 
-If you've found a bug regarding security please mail [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
+If you've found a bug regarding security please mail [security@laravel-russian.be](mailto:security@laravel-russian.be) instead of using the issue tracker.
 
 ## Credits
 
-- [Freek Van der Herten](https://github.com/freekmurze)
-- [All Contributors](../../contributors)
+-   [Freek Van der Herten](https://github.com/freekmurze)
+-   [All Contributors](../../contributors)
 
 ## License
 

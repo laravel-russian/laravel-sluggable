@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Sluggable\Tests\TestSupport;
+namespace LaravelRussian\Sluggable\Tests\TestSupport;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\HasSlug;
+use LaravelRussian\Sluggable\SlugOptions;
 
 class TestModel extends Model
 {

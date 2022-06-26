@@ -2,10 +2,10 @@
 
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
-use Spatie\Sluggable\SlugOptions;
-use Spatie\Sluggable\Tests\TestSupport\TestModel;
-use Spatie\Sluggable\Tests\TestSupport\TranslatableModel;
-use Spatie\Sluggable\Tests\TestSupport\TranslatableModelSoftDeletes;
+use LaravelRussian\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\Tests\TestSupport\TestModel;
+use LaravelRussian\Sluggable\Tests\TestSupport\TranslatableModel;
+use LaravelRussian\Sluggable\Tests\TestSupport\TranslatableModelSoftDeletes;
 
 beforeEach(function () {
     $this->testModel = new TranslatableModel();

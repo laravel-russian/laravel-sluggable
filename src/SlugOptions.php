@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Sluggable;
+namespace LaravelRussian\Sluggable;
 
 class SlugOptions
 {

@@ -1,6 +1,6 @@
 <?php
 
-use Spatie\Sluggable\Tests\TestSupport\ScopeableModel;
+use LaravelRussian\Sluggable\Tests\TestSupport\ScopeableModel;
 
 it('generates same slug for each scope', function () {
     $testModel = ScopeableModel::create(['name' => 'name', 'scope_id' => 1]);

@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\Sluggable\Tests\TestSupport;
+namespace LaravelRussian\Sluggable\Tests\TestSupport;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\Sluggable\HasSlug;
-use Spatie\Sluggable\SlugOptions;
+use LaravelRussian\Sluggable\HasSlug;
+use LaravelRussian\Sluggable\SlugOptions;
 
 class TestModelSoftDeletes extends Model
 {

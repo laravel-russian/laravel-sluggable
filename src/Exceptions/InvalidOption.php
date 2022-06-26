@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Sluggable\Exceptions;
+namespace LaravelRussian\Sluggable\Exceptions;
 
 use Exception;
 
